@@ -1,0 +1,12 @@
+<apex:page standardController="Opportunity" extensions="ClusterOpportunityCtrl">
+    <apex:form >
+        <script type="text/javascript">
+            function loading(){
+                document.getElementById("{!$Component.loading}").style="display:inline";
+            }
+        </script>
+        <apex:commandButton onclick="loading()" action="{!cluster}" value="Submit" />
+        <apex:image id="loading" value="/img/loading.gif" style="display:none"/>
+    </apex:form>
+    <p>{!screenMsg}</p>
+</apex:page>
